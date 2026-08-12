@@ -24,11 +24,17 @@ const workerConfig: WorkerConfig = {
       method: 'GET',
       target: 'https://jfapp.xyz/health'
     },
-        {
-      id: 'dl_1',
+    {
+      id: 'dl',
       name: 'Download Service',
       method: 'GET',
       target: 'https://dl.jfapp.xyz'
+    },
+    {
+      id: 'requests',
+      name: 'Request Service',
+      method: 'GET',
+      target: 'https://requests.jfapp.xyz'
     },
   ],
   // [Optional] Notification settings
@@ -78,17 +84,11 @@ const workerConfig: WorkerConfig = {
 const maintenances: MaintenanceConfig[] = [
   {
     // [Optional] Monitor IDs to be affected by this maintenance
-    monitors: ['foo_monitor', 'bar_monitor'],
+    monitors: ['jellyfin', 'dl_1'],
     // [Optional] default to "Scheduled Maintenance" if not specified
-    title: 'Test Maintenance',
+    title: 'Maintenance',
     // Description of the maintenance, will be shown at status page
-    body: 'This is a test maintenance, server software upgrade',
-    // Start time of the maintenance, in UNIX timestamp or ISO 8601 format
-    start: '2020-01-01T00:00:00+08:00',
-    // [Optional] end time of the maintenance, in UNIX timestamp or ISO 8601 format
-    // if not specified, the maintenance will be considered as on-going
-    end: '2050-01-01T00:00:00+08:00',
-    // [Optional] color of the maintenance alert at status page, default to "yellow"
+    body: 'This is a maintenance, server software upgrade',
     color: 'blue',
   },
 ]
