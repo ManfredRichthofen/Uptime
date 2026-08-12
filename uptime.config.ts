@@ -73,14 +73,14 @@ const workerConfig: WorkerConfig = {
 // During maintenance, an alert will be shown at status page
 // Also, related downtime notifications will be skipped (if any)
 // Of course, you can leave it empty if you don't need this feature
-const maintenances: MaintenanceConfig[] = [
+// const maintenances: MaintenanceConfig[] = [
   {
    // monitors: ['jellyfin', 'dl'],
    // title: 'Maintenance',
    // body: 'This is a maintenance, server software upgrade',
    //  start: '2020-01-01T00:00:00+08:00',
    // color: 'blue',
-  },
+ // },
 ]
 
 // Don't edit this line
