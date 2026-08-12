@@ -83,11 +83,8 @@ const workerConfig: WorkerConfig = {
 
 const maintenances: MaintenanceConfig[] = [
   {
-    // [Optional] Monitor IDs to be affected by this maintenance
     monitors: ['jellyfin', 'dl_1'],
-    // [Optional] default to "Scheduled Maintenance" if not specified
     title: 'Maintenance',
-    // Description of the maintenance, will be shown at status page
     body: 'This is a maintenance, server software upgrade',
     color: 'blue',
   },
